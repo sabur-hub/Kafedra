@@ -1,0 +1,198 @@
+.staff-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #f6f9fc, #e9eff5);
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #1e3799;
+  margin-bottom: 30px;
+}
+
+.staff-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.staff-card {
+  background: linear-gradient(135deg, #ffffff, #f9fbff);
+  border: 1px solid #ccd4e0;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.staff-photo {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.staff-card:hover .staff-photo {
+  transform: scale(1.05);
+}
+
+.staff-card h2 {
+  color: #2c3e50;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.staff-card p {
+  color: #566573;
+  margin: 8px 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.staff-details {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.staff-photo-large {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.staff-info {
+  flex: 1;
+}
+
+.staff-info p {
+  margin: 8px 0;
+  font-size: 1.1em;
+}
+
+.staff-description {
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+}
+
+.back-button {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  transform: scale(1.05);
+}
+
+/* Стилизация таблицы */
+.table-container {
+  overflow-x: auto;
+}
+
+.staff-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.staff-details table th,
+.staff-details table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.staff-details table th {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.staff-details table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.staff-details table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.staff-details table tr:hover {
+  background-color: #f1f8ff;
+  color: #0056b3;
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .staff-card {
+    width: 100%;
+  }
+
+  .staff-details {
+    padding: 20px;
+    font-size: 0.9em;
+  }
+
+  .details-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.staff-card p,
+.staff-details pre {
+  white-space: pre-wrap; /* переносы строк учитываются */
+  word-wrap: break-word; /* перенос длинных слов */
+}

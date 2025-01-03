@@ -1,0 +1,105 @@
+.navbar {
+  background-color: #004080;
+  padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  color: #fff;
+  font-size: 1.8em;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-button {
+  background-color: #0080ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar-button:hover {
+  background-color: #0056b3;
+}
+
+.navbar-button:active {
+  transform: scale(0.95);
+}
+
+/* Кнопка меню */
+.menu-button {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  position: fixed;
+  right: 20px;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: none; /* По умолчанию скрыта */
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 880px) {
+  .menu-button {
+    display: block; /* Показываем кнопку при ширине экрана менее 880px */
+  }
+
+  .navbar-buttons {
+    display: none; /* Скрываем кнопки меню по умолчанию */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #004080;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px; /* Устанавливаем фиксированную ширину для мобильного меню */
+  }
+
+  .navbar-buttons.open {
+    display: flex; /* Показываем меню, когда оно открыто */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #004080;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-button {
+    height: 54px;
+    font-weight: 400;
+    padding: 0 10px;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    transition: 0.3s;
+    width: 40%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
